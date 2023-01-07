@@ -37,6 +37,7 @@ a {
     height: 2px;
     background: var(--nav-gradient);
     bottom: 0;
+    left: 0;
 }
 nav .container #bars {
     display: none;
@@ -135,11 +136,17 @@ main {
     .body-container::before {
         display: none;
     }
+    .container {
+        padding-inline:0px;
+    }
+    .container::after {
+        background-color: #0077B5;
+    }
 }
 @media (max-width:750px) {
     .body-container .body-content h1 {
         font-size: 20px !important;
-        max-width: 350px;
+        max-width: fit-content;
         text-align: center;
     }
     .body-container .body-content .first-animation {
@@ -208,6 +215,10 @@ main {
         height: 405px;
         width: 250px;
     }  
+    .body-container .body-content h1 {
+        width: 350px;
+        font-size: 20px;
+    }
     .icon {
         width: 150px;
         height: 150px;
@@ -469,7 +480,8 @@ footer .footer-container {
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
-    padding: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     margin: auto;
 }
 .footer-container::before {
@@ -516,6 +528,11 @@ footer .footer-container h2 {
 }
 @media (max-width:750px) {
     footer .footer-container {
-    flex-direction: column;
+    /* flex-direction: column;
+    align-items: flex-start; */
+    padding-left:0px ;
+}
+.footer-container::before  {
+    background-color: #0077B5;
 }
 }
